@@ -18,8 +18,6 @@ def access_data(ticker_symbol, period):
         if row['Symbol'] == ticker_symbol:
             ticker = yf.Ticker(ticker_symbol)
             historical = ticker.history(period=period)
-            st.write(historical)
-            st.write(historical)
             return historical
     return None
         
